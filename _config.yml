@@ -1,0 +1,12 @@
+title: Best Response Studios
+description: Games and objects for economists & co.
+url: "https://bestresponsestudios.github.io"
+baseurl: ""
+github_username: bestresponsestudios
+theme: minima
+plugins:
+  - jekyll-feed
+collections:
+  products:
+    output: true
+    permalink: /:name/

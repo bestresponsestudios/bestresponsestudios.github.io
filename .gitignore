@@ -1,0 +1,8 @@
+_site
+.sass-cache
+.jekyll-metadata
+
+manifest.csv
+*.csv
+.env
+private/
