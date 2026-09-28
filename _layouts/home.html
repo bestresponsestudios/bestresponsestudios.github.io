@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<main>
+  <div class="container hero-container">
+    {% include section-heading.html tag="h1" size="display" kicker="An independent studio" title="Games and objects for economists" accent="and co." lede="Made for people who say “it depends” professionally, and for the loved ones who have to live with them." %}
+  </div>
+
+  <section id="products" class="section">
+    <div class="container">
+      {% include section-heading.html tag="h2" size="h2" kicker="Catalog" title="Products" %}
+      <div class="product-grid">
+        <a class="product-tile product-tile--flagship" href="{{ '/assumeacanopener/' | relative_url }}">
+          <div class="pt-media">
+            <div class="card-fan">
+              {% include game-card.html type="prompt" width=190 rotate=-4 text="What’s the sixth stage of academic grief?" img="/assets/images/cards/grief.png" %}
+              {% include game-card.html type="rebuttal" width=190 rotate=3 text="P-hacking." footnote="With extra steps." img="/assets/images/cards/phacking.png" style="margin-left:-36px;margin-top:30px;" %}
+            </div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-row"><span class="kicker">Card game</span><span class="badge badge-field">Flagship</span></div>
+            <h3>Assume a Can Opener</h3>
+            <p>A prompt-and-rebuttal card game. Smart enough for your most jaded econometrician. Funny enough for everyone else.</p>
+            <span class="pt-cta">See the game</span>
+          </div>
+        </a>
+        <div class="product-tile">
+          <div class="pt-media sticker-media">
+            <div class="sticker-fan">
+              <img src="{{ '/assets/images/stickers/departmental2.png' | relative_url }}" alt="Sticker: field notes on departmental meetings">
+              <img src="{{ '/assets/images/stickers/keepcalm2.png' | relative_url }}" alt="Sticker: Keep calm and marginal revenue equal marginal cost">
+              <img src="{{ '/assets/images/stickers/circlereplication2.png' | relative_url }}" alt="Sticker: We didn't replicate the finding, but we did replicate the argument at the poster session.">
+            </div>
+          </div>
+          <div class="pt-body">
+            <div class="pt-row"><span class="kicker">Stickers</span><span class="badge badge-muted">Forthcoming</span></div>
+            <h3>Stickers</h3>
+            <p>For laptops, office doors and the backs of referee reports. In development.</p>
+          </div>
+        </div>
+        <div class="product-tile">
+          <div class="pt-media novelty-media">
+            <img src="{{ '/assets/images/novelty-wrapper.png' | relative_url }}" alt="Novelty object concept: a printed-wrapper candy cane" class="novelty-1">
+            <img src="{{ '/assets/images/novelty-hooktopper.png' | relative_url }}" alt="Novelty object concept: a hook-topper candy cane with a framed portrait" class="novelty-2">
+            <img src="{{ '/assets/images/novelty-medallion.png' | relative_url }}" alt="Novelty object concept: a candy cane with an edible-ink medallion" class="novelty-3">
+          </div>
+          <div class="pt-body">
+            <div class="pt-row"><span class="kicker">Objects</span><span class="badge badge-muted">Forthcoming</span></div>
+            <h3>Novelty objects</h3>
+            <p>Things for the desk of someone who has strong views on instrumental variables. In development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container studio-grid">
+      {% include section-heading.html tag="h2" size="h2" kicker="The studio" title="Specificity over hype." %}
+      <div class="studio-text">
+        <p class="body-text">Best Response Studios makes games and objects in the voice of the seminar room: dry, precise, and footnoted where necessary. Everything is tested on real economists before it is sold to anyone else.</p>
+        <p class="body-text"><a class="text-link" href="{{ '/about/' | relative_url }}">More about the studio</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container band-container">
+    {% include signup-band.html %}
+  </div>
+</main>

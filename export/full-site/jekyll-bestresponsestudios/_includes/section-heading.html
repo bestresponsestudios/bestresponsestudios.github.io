@@ -1,0 +1,7 @@
+{% assign tag = include.tag | default: 'h2' %}
+{% assign size = include.size | default: 'h2' %}
+<div class="section-heading sh-{{ size }}{% if include.align == 'center' %} center{% endif %}{% if include.on_field %} on-field{% endif %}">
+  {% if include.kicker %}<div class="kicker">{{ include.kicker }}</div>{% endif %}
+  <{{ tag }}>{{ include.title }}{% if include.accent %} <em class="accent">{{ include.accent }}</em>{% endif %}</{{ tag }}>
+  {% if include.lede %}<p class="lede">{{ include.lede }}</p>{% endif %}
+</div>

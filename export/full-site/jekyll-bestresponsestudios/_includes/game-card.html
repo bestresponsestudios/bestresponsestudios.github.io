@@ -1,0 +1,15 @@
+{% assign w = include.width | default: 220 %}
+{% if include.img %}
+<img class="game-card game-card--{{ w }}" src="{{ include.img | relative_url }}" alt="{{ include.type | capitalize }} card: {{ include.text }}"{% if include.rotate or include.style %} style="{% if include.rotate %}transform:rotate({{ include.rotate }}deg);{% endif %}{{ include.style }}"{% endif %}>
+{% else %}
+{% assign k = include.kicker %}
+{% if k == nil or k == "" %}
+  {% if include.type == "rebuttal" %}{% assign k = "Rebuttal · You answer" %}{% else %}{% assign k = "Prompt · The chair asks" %}{% endif %}
+{% endif %}
+<div class="game-card game-card--{{ include.type }} game-card--{{ w }}"{% if include.rotate or include.style %} style="{% if include.rotate %}transform:rotate({{ include.rotate }}deg);{% endif %}{{ include.style }}"{% endif %}>
+  <div class="gc-kicker">{{ k }}</div>
+  <div class="gc-title">{{ include.text }}</div>
+  {% if include.footnote %}<div class="gc-footnote">{{ include.footnote }}</div>{% endif %}
+  <div class="gc-footer">{{ include.footer | default: "Assume a Can Opener" }}</div>
+</div>
+{% endif %}

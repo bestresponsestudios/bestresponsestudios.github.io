@@ -1,0 +1,14 @@
+{% comment %}
+  "Join the list" call to action. If site.mailerlite_form_id is set, opens the
+  MailerLite pop-up form; otherwise falls back to linking out to the waitlist page.
+  Params: class, label, tag ("a" default, or "button")
+{% endcomment %}
+{% assign tag = include.tag | default: "a" %}
+{% assign form_id = include.form | default: site.mailerlite_form_id %}
+{% if form_id %}
+{% assign ml_onclick = "if (typeof ml === 'function') { ml('show', '" | append: form_id | append: "', true); } else { window.location.href = '" | append: site.signup_url | append: "'; }" %}
+{% if tag == "button" %}<button type="button" class="{{ include.class }} ml-onclick-form" onclick="{{ ml_onclick }}">{{ include.label | default: "Join the list" }}</button>
+{% else %}<a href="{{ site.signup_url }}" target="_blank" rel="noopener noreferrer" class="{{ include.class }} ml-onclick-form" onclick="{{ ml_onclick }} return false;">{{ include.label | default: "Join the list" }}</a>
+{% endif %}
+{% else %}<a href="{{ site.signup_url }}" class="{{ include.class }}" target="_blank" rel="noopener noreferrer">{{ include.label | default: "Join the list" }}</a>
+{% endif %}

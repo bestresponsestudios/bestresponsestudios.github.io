@@ -1,0 +1,118 @@
+---
+layout: default
+---
+<main>
+  <div class="hero-band{% if page.hero_theme == 'oxblood' %} oxblood{% endif %}">
+    {% assign hero_on_field = false %}{% if page.hero_theme == 'oxblood' %}{% assign hero_on_field = true %}{% endif %}
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        {% include section-heading.html tag="h1" size="h1" kicker=page.kicker title=page.title accent=page.accent lede=page.lede on_field=hero_on_field %}
+        <div class="hero-actions">
+          {% if page.checkout_url %}
+            <a class="btn {% if hero_on_field %}btn-inverse{% else %}btn-primary{% endif %} btn-lg" href="{{ page.checkout_url }}" target="_blank" rel="noopener noreferrer">Buy<span class="ext" aria-hidden="true"> ↗</span></a>
+            {% assign join_class = "btn btn-secondary btn-lg" %}{% if hero_on_field %}{% assign join_class = "btn btn-inverse-secondary btn-lg" %}{% endif %}
+            {% include join-cta.html tag="button" class=join_class %}
+          {% else %}
+            {% assign join_class = "btn btn-primary btn-lg" %}{% if hero_on_field %}{% assign join_class = "btn btn-inverse btn-lg" %}{% endif %}
+            {% include join-cta.html tag="button" class=join_class %}
+            <a class="btn {% if hero_on_field %}btn-inverse-secondary{% else %}btn-ghost{% endif %} btn-lg" href="#how">How it plays</a>
+          {% endif %}
+        </div>
+      </div>
+      <div class="hero-media">
+        {% if page.hero_image %}
+        <img class="hero-box-art" src="{{ page.hero_image | relative_url }}" alt="{{ page.title }} box front">
+        {% else %}
+        {% if page.hero_edition %}<div class="edition-tag">{{ page.hero_edition }}</div>{% endif %}
+        <div class="card-fan">
+          {% assign h0 = page.hero[0] %}{% assign h1 = page.hero[1] %}
+          {% include game-card.html type=h0.type width=220 rotate=-4 text=h0.text img=h0.img %}
+          {% include game-card.html type=h1.type width=220 rotate=3 text=h1.text img=h1.img style="margin-left:-40px;margin-top:40px;" %}
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <section class="section no-rule">
+    <div class="container narrow origin-block">
+      {% include section-heading.html tag="h2" size="h2" kicker="Origin" title=page.origin.title %}
+      <p class="body-text body-lede">{{ page.origin.body }}</p>
+      <p class="caption">{{ page.origin.caption }}</p>
+    </div>
+  </section>
+
+  {% if page.stats %}
+  <section class="section">
+    <div class="container">
+      {% include section-heading.html tag="h2" size="h2" kicker="In the box" title="What's in the box." %}
+      <div class="stats-grid">
+        {% for s in page.stats %}
+        <div class="stat"><span class="stat-num">{{ s.num }}</span><span class="stat-label">{{ s.label }}</span><p class="stat-caption">{{ s.caption }}</p></div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section id="how" class="section">
+    <div class="container">
+      {% include section-heading.html tag="h2" size="h2" kicker="How it plays" title=page.how_title accent=page.how_accent %}
+      <ol class="steps">
+        {% for s in page.steps %}
+        <li><span class="step-no">No. {{ forloop.index }}</span><p class="body-text">{{ s }}</p></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section sunken">
+    <div class="container">
+      {% if page.deck_edition %}<div class="edition-tag">{{ page.deck_edition }}</div>{% endif %}
+      {% include section-heading.html tag="h2" size="h2" kicker="From the deck" title="Sample prompts and rebuttals." %}
+      <div class="deck-showcase">
+        <div class="deck-row">
+          {% for c in page.sample_prompts %}
+          <figure class="deck-card"><img src="{{ c.img | relative_url }}" alt="Prompt card: {{ c.text }}"><figcaption>{{ c.footnote }}</figcaption></figure>
+          {% endfor %}
+        </div>
+        <div class="deck-row">
+          {% for c in page.sample_rebuttals %}
+          <figure class="deck-card"><img src="{{ c.img | relative_url }}" alt="Rebuttal card: {{ c.text }}"><figcaption>{{ c.footnote }}</figcaption></figure>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container notes-grid">
+      {% for n in page.notes %}
+      <figure class="pull-quote lg">
+        <div class="kicker">Playtest note</div>
+        <blockquote>{{ n }}</blockquote>
+      </figure>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% if page.faq %}
+  <section class="section">
+    <div class="container narrow">
+      {% include section-heading.html tag="h2" size="h2" kicker="Questions" title="Frequently asked." %}
+      <div class="faq-list">
+        {% for item in page.faq %}
+        <details class="faq-item">
+          <summary>{{ item.q }}</summary>
+          <p class="body-text body-sm muted">{{ item.a }}</p>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <div class="container band-container">
+    {% include signup-band.html title="Hear when the deck ships." %}
+  </div>
+</main>

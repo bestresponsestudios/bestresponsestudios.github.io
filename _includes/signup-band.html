@@ -1,0 +1,8 @@
+<section id="signup" class="signup-band">
+  <div class="sb-text">
+    <div class="kicker">{{ include.kicker | default: "Correspondence" }}</div>
+    <h2>{{ include.title | default: "Join the list." }}</h2>
+    <p>{{ include.body | default: "Occasional letters when something new is ready. No more often than that." }}</p>
+  </div>
+  {% include join-cta.html tag="button" class="btn btn-inverse btn-lg" label=include.label %}
+</section>

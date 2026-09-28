@@ -1,0 +1,14 @@
+{% assign products_active = false %}
+{% if page.url == "/" or page.collection == "products" %}{% assign products_active = true %}{% endif %}
+{% assign about_active = false %}
+{% if page.url == "/about/" %}{% assign about_active = true %}{% endif %}
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="{{ '/' | relative_url }}">Best Response Studios</a>
+    <nav>
+      <a class="nav-link{% if products_active %} active{% endif %}" href="{{ '/' | relative_url }}#products">Products</a>
+      <a class="nav-link{% if about_active %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>
+      {% include join-cta.html class="btn btn-secondary btn-sm" %}
+    </nav>
+  </div>
+</header>
