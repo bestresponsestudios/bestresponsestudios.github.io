@@ -7,6 +7,8 @@ signup_url: "https://assume-a-can-opener.subscribepage.io/"
 mailerlite_account_id: "2419946"
 # Pop-up form ID — used on every "Join the list" button/link site-wide
 mailerlite_form_id: "giFbGK"
+# Google Analytics 4 measurement ID
+google_analytics_id: "G-ZK23P83XEJ"
 markdown: kramdown
 permalink: /:name/
 collections:
