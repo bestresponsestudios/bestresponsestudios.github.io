@@ -182,7 +182,7 @@ img.game-card--230{width:230px}
 .sticker-fan img{width:42%;aspect-ratio:1/1;object-fit:contain;border-radius:2px;box-shadow:none}
 .sticker-fan img:nth-child(1){transform:rotate(-6deg) translate(20px,8px);z-index:1}
 .sticker-fan img:nth-child(2){transform:rotate(-8deg);z-index:2;margin-left:-8%}
-.sticker-fan img:nth-child(3){transform:rotate(12deg) translateX(-8px);z-index:3}
+.sticker-fan img:nth-child(3){transform:rotate(12deg) translateX(-8px);z-index:3;margin-left:-10%}
 .pt-body{display:flex;flex-direction:column;gap:12px;padding:24px}
 .pt-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .product-tile h3{margin:0;font-family:var(--font-display);font-weight:600;font-size:var(--size-h3);line-height:var(--lh-h3);letter-spacing:var(--tracking-display);color:var(--ink-900);text-wrap:balance}
