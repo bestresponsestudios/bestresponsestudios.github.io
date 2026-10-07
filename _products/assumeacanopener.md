@@ -6,6 +6,9 @@ hero_image: /assets/images/a2co-box-front.png
 kicker: The economics party game
 accent: Funny enough for everyone else.
 lede: A deck of prompts, a deck of rebuttals, and one rulebook nobody reads.
+hero_title: Smart enough for your most jaded econometrician.
+hero_body: 39 prompt cards, 190 rebuttal cards, and one rulebook nobody reads. Oxblood leather, brass, cream.
+hero_note: Sells best to gift buyers who have to live with them
 checkout_url:
 hero:
   - type: prompt
@@ -26,8 +29,8 @@ stats:
     label: "Rulebook nobody reads"
     caption: "Brass cover. Rules fit on the back of the box anyway."
 origin:
-  title: "First, assume a can opener."
-  body: "Three academics are stranded on an island with a sealed can of food. The physicist calculates the force required to open it. The engineer builds a tool. The economist says, \u201cFirst, assume a can opener.\u201d"
+  title: "Three academics are stranded on an island with a sealed can of food."
+  body: "The physicist calculates the force required to open it.\nThe engineer builds a tool.\n\nThe economist says,\n\u201cFirst, assume a can opener.\u201d"
   caption: "An old economics joke. Provenance uncertain, methodology questionable, conclusion sound."
 how_title: "One prompt."
 how_accent: "One best response."

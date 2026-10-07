@@ -6,18 +6,11 @@ layout: default
     {% assign hero_on_field = false %}{% if page.hero_theme == 'oxblood' %}{% assign hero_on_field = true %}{% endif %}
     <div class="container hero-grid">
       <div class="hero-copy">
-        {% include section-heading.html tag="h1" size="h1" kicker=page.kicker title=page.title accent=page.accent lede=page.lede on_field=hero_on_field %}
-        <div class="hero-actions">
-          {% if page.checkout_url %}
-            <a class="btn {% if hero_on_field %}btn-inverse{% else %}btn-primary{% endif %} btn-lg" href="{{ page.checkout_url }}" target="_blank" rel="noopener noreferrer">Buy<span class="ext" aria-hidden="true"> ↗</span></a>
-            {% assign join_class = "btn btn-secondary btn-lg" %}{% if hero_on_field %}{% assign join_class = "btn btn-inverse-secondary btn-lg" %}{% endif %}
-            {% include join-cta.html tag="button" class=join_class %}
-          {% else %}
-            {% assign join_class = "btn btn-primary btn-lg" %}{% if hero_on_field %}{% assign join_class = "btn btn-inverse btn-lg" %}{% endif %}
-            {% include join-cta.html tag="button" class=join_class %}
-            <a class="btn {% if hero_on_field %}btn-inverse-secondary{% else %}btn-ghost{% endif %} btn-lg" href="#how">How it plays</a>
-          {% endif %}
-        </div>
+        {% if page.hero_edition %}<span class="hero-pill">{{ page.hero_edition }}</span>{% endif %}
+        <h1 class="hero-title">{{ page.hero_title | default: page.title }}</h1>
+        {% if page.accent %}<p class="hero-accent">{{ page.accent }}</p>{% endif %}
+        {% if page.hero_body %}<p class="hero-body">{{ page.hero_body }}</p>{% endif %}
+        {% if page.hero_note %}<p class="hero-note">{{ page.hero_note }}</p>{% endif %}
       </div>
       <div class="hero-media">
         {% if page.hero_image %}
@@ -37,7 +30,7 @@ layout: default
   <section class="section no-rule">
     <div class="container narrow origin-block">
       {% include section-heading.html tag="h2" size="h2" kicker="Origin" title=page.origin.title %}
-      <p class="body-text body-lede">{{ page.origin.body }}</p>
+      <p class="body-text body-lede origin-poem">{{ page.origin.body }}</p>
       <p class="caption">{{ page.origin.caption }}</p>
     </div>
   </section>
@@ -45,11 +38,19 @@ layout: default
   {% if page.stats %}
   <section class="section">
     <div class="container">
-      {% include section-heading.html tag="h2" size="h2" kicker="In the box" title="What's in the box." %}
+      <div class="box-heading">
+        <div class="kicker">Faculty Lounge edition</div>
+        <h2>What's in the box</h2>
+      </div>
       <div class="stats-grid">
         {% for s in page.stats %}
         <div class="stat"><span class="stat-num">{{ s.num }}</span><span class="stat-label">{{ s.label }}</span><p class="stat-caption">{{ s.caption }}</p></div>
         {% endfor %}
+      </div>
+      <div class="card-backs">
+        <img src="{{ '/assets/images/cards/back_prompt.png' | relative_url }}" alt="Prompt card back: oxblood with the game title">
+        <img src="{{ '/assets/images/cards/back_rebuttal.png' | relative_url }}" alt="Rebuttal card back: cream with the game title">
+        <p>Card backs. Oxblood for prompts, cream for rebuttals.</p>
       </div>
     </div>
   </section>
