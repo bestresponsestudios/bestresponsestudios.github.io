@@ -7,7 +7,7 @@ kicker: The economics party game
 accent: Funny enough for everyone else.
 lede: A deck of prompts, a deck of rebuttals, and one rulebook nobody reads.
 hero_title: Smart enough for your most jaded econometrician.
-hero_body: 39 prompt cards, 190 rebuttal cards, and one rulebook nobody reads. Oxblood leather, brass, cream.
+hero_body: 39 prompt cards, 191 rebuttal cards, and one rulebook nobody reads. Oxblood leather, brass, cream.
 hero_note: Sells best to gift buyers who have to live with them
 checkout_url:
 hero:
@@ -29,9 +29,10 @@ stats:
     label: "Rulebook nobody reads"
     caption: "Brass cover. Rules fit on the back of the box anyway."
 origin:
-  title: "Three academics are stranded on an island with a sealed can of food."
-  body: "The physicist calculates the force required to open it.\nThe engineer builds a tool.\n\nThe economist says,\n\u201cFirst, assume a can opener.\u201d"
-  caption: "An old economics joke. Provenance uncertain, methodology questionable, conclusion sound."
+  title: "Three academics"
+  body: "Are stranded on an island with a sealed can of food.\n\nThe <strong>physicist</strong> calculates the force required to open it. The <strong>engineer</strong> builds a tool. The <strong>economist</strong> says,"
+  quote: "\u201cFirst, we <strong>assume a can opener</strong>.\u201d"
+  caption: "An old economics joke. Provenance uncertain, methodology questionable. Conclusion sound."
 how_title: "One prompt."
 how_accent: "One best response."
 steps:

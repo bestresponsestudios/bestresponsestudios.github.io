@@ -31,7 +31,8 @@ layout: default
     <div class="container narrow origin-block">
       {% include section-heading.html tag="h2" size="h2" kicker="Origin" title=page.origin.title %}
       <p class="body-text body-lede origin-poem">{{ page.origin.body }}</p>
-      <p class="caption">{{ page.origin.caption }}</p>
+      <p class="body-text body-lede origin-poem origin-center">{{ page.origin.quote }}</p>
+      <p class="body-text body-lede origin-poem origin-center origin-caption">{{ page.origin.caption }}</p>
     </div>
   </section>
 
@@ -50,7 +51,7 @@ layout: default
       <div class="card-backs">
         <img src="{{ '/assets/images/cards/back_prompt.png' | relative_url }}" alt="Prompt card back: oxblood with the game title">
         <img src="{{ '/assets/images/cards/back_rebuttal.png' | relative_url }}" alt="Rebuttal card back: cream with the game title">
-        <p>Card backs. Oxblood for prompts, cream for rebuttals.</p>
+        <p>Card backs. Oxblood for prompts, Cream for rebuttals.</p>
       </div>
     </div>
   </section>
