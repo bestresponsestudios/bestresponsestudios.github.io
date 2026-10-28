@@ -1,10 +1,30 @@
-{% assign products_active = false %}
 {% if page.url == "/" or page.collection == "products" %}{% assign products_active = true %}{% endif %}
 {% assign about_active = false %}
 {% if page.url == "/about/" %}{% assign about_active = true %}{% endif %}
+
+{% comment %} STEP 2: the header bar. {% endcomment %}
 <header class="site-header">
   <div class="wrap">
-    <a class="wordmark" href="{{ '/' | relative_url }}">Best Response Studios</a>
+
+    {% comment %}
+    LOGO
+    OLD (text only):
+      <a class="wordmark" href="{{ '/' | relative_url }}">Best Response Studios</a>
+    NEW: the mark picture beside the text wordmark.
+      src      = which image file to show (a site path starting with /assets, not C:\)
+      alt      = description for screen readers or a broken image
+      height   = how tall to draw it (the width follows automatically)
+      aria-label = what a screen reader says for the whole link
+    FALLBACK: the text "Best Response Studios" is real text beside the mark, so if the
+    image is missing or fails to load, the link still reads as the old text-only wordmark.
+    Needs in main.css:  .wordmark{display:inline-flex;align-items:center;gap:12px}
+    {% endcomment %}
+    <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Best Response Studios">
+      <img src="{{ '/assets/images/brs-mark-01-creamground.svg' | relative_url }}" alt="Best Response Studios" width="38" height="38">
+      <span>Best Response Studios</span>
+    </a>
+
+    {% comment %} Menu links on the right. {% endcomment %}
     <nav>
       <a class="nav-link{% if products_active %} active{% endif %}" href="{{ '/' | relative_url }}#products">Products</a>
       <a class="nav-link{% if about_active %} active{% endif %}" href="{{ '/about/' | relative_url }}">About</a>

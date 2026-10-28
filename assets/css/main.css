@@ -107,7 +107,8 @@ hr.rule{border:0;border-top:1px solid var(--brass-500);height:0}
 /* ---- header ---- */
 .site-header{background:var(--cream-200);border-bottom:1px solid var(--brass-500)}
 .site-header .wrap{max-width:var(--container-max);margin:0 auto;padding:0 var(--gutter);height:var(--header-height);display:flex;align-items:center;justify-content:space-between;gap:24px}
-.wordmark{font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:var(--tracking-display);color:var(--ink-900);text-decoration:none;white-space:nowrap}
+.wordmark{display:inline-flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:600;font-size:22px;letter-spacing:var(--tracking-display);color:var(--ink-900);text-decoration:none;white-space:nowrap}
+.wordmark img{display:block;flex:none}
 .wordmark:hover{color:var(--ink-900)}
 .site-header nav{display:flex;align-items:center;gap:28px;flex-wrap:nowrap}
 .nav-link{font-family:var(--font-ui);font-size:14px;font-weight:500;text-decoration:none;padding:6px 0;color:var(--ink-900);border-bottom:1px solid transparent;transition:color var(--dur-hover) var(--ease-hover)}

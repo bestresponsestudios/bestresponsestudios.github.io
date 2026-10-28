@@ -2,7 +2,11 @@
   <div class="wrap">
     <div class="top">
       <div class="brand">
-        <div class="name">Best Response Studios</div>
+        {% comment %} Mark beside the text name. If the image fails to load, the text name still shows. {% endcomment %}
+        <div class="name">
+          <img src="{{ '/assets/images/brs-mark-03-redground.svg' | relative_url }}" alt="" width="32" height="32">
+          <span>Best Response Studios</span>
+        </div>
         <p>An independent studio making games and objects for economists and co.</p>
       </div>
       <nav>
