@@ -1,4 +1,4 @@
-/* ---- tokens ---- */
+﻿/* ---- tokens ---- */
 :root{
   --oxblood-500:#7d1e1c; --oxblood-700:#661514; --oxblood-900:#4a0f0e;
   --brass-500:#a67c3d; --cream-100:#fdfbf8; --cream-200:#f9f4f0; --cream-300:#f1e8df;
@@ -120,7 +120,8 @@ hr.rule{border:0;border-top:1px solid var(--brass-500);height:0}
 .site-footer .wrap{max-width:var(--container-max);margin:0 auto;padding:56px var(--gutter) 40px;display:flex;flex-direction:column;gap:36px}
 .site-footer .top{display:flex;justify-content:space-between;align-items:flex-start;gap:32px;flex-wrap:wrap}
 .site-footer .brand{display:flex;flex-direction:column;gap:10px;max-width:380px}
-.site-footer .brand .name{font-family:var(--font-display);font-weight:600;font-size:24px}
+.site-footer .brand .name{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-weight:600;font-size:24px}
+.site-footer .brand .name img{display:block;flex:none}
 .site-footer .brand p{margin:0;font-family:var(--font-body);font-size:17px;line-height:1.5;color:var(--text-on-field-muted)}
 .site-footer nav{display:flex;gap:28px;flex-wrap:wrap}
 .site-footer nav a{font-family:var(--font-ui);font-size:14px;font-weight:500;color:var(--cream-200);text-decoration:none}
@@ -293,3 +294,4 @@ img.game-card--230{width:230px}
   .deck-card img{width:100%}
   .hero-box-art{max-width:100%;height:auto}
 }
+
