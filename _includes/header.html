@@ -1,4 +1,4 @@
-{% if page.url == "/" or page.collection == "products" %}{% assign products_active = true %}{% endif %}
+﻿{% if page.url == "/" or page.collection == "products" %}{% assign products_active = true %}{% endif %}
 {% assign about_active = false %}
 {% if page.url == "/about/" %}{% assign about_active = true %}{% endif %}
 
@@ -20,7 +20,7 @@
     Needs in main.css:  .wordmark{display:inline-flex;align-items:center;gap:12px}
     {% endcomment %}
     <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Best Response Studios">
-      <img src="{{ '/assets/images/brs-mark-blocks.svg' | relative_url }}" alt="Best Response Studios" width="38" height="38">
+      <img src="{{ '/assets/images/brs-mark-01-creamground.svg' | relative_url }}" alt="Best Response Studios" width="38" height="38">
       <span>Best Response Studios</span>
     </a>
 
